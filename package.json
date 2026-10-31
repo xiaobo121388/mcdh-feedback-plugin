@@ -1,0 +1,26 @@
+{
+  "name": "blockecho-mcdh-feedback",
+  "version": "0.2.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaobo121388/mcdh-feedback-plugin.git"
+  },
+  "engines": { "node": ">=22" },
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:rust": "cargo test --locked --workspace",
+    "check:rust": "cargo clippy --locked --workspace --all-targets -- -D warnings",
+    "test:ui": "node scripts/test-ui.mjs",
+    "test:native": "node scripts/test-native.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "esbuild": "0.25.12",
+    "lucide": "0.468.0",
+    "markdown-it": "14.1.0"
+  }
+}
